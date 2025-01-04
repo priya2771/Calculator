@@ -15,7 +15,31 @@ body {
 
   background-repeat: no-repeat;
   background-size: cover;
+  cursor: none;
 }
+.cursor-dot {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+}
+
+.cursor-outline {
+  width: 35px;
+  height: 35px;
+  border: 4px solid hsla(0, 0%, 100%, 0.5);
+}
+
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+}
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -56,13 +80,13 @@ button {
   font-size: 20px;
   font-weight: bolder;
   transition: all 0.3s;
-  cursor: pointer;
 }
 
 button:hover {
   background-color: rgb(209, 166, 10);
   transform: scale(1.15);
   border-radius: 25px;
+  cursor: none;
 }
 button:active {
   transform: scale(0.85);
